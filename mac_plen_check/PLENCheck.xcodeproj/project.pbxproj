@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F899487A1B9ECBAA000DC950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89948791B9ECBAA000DC950 /* AppDelegate.swift */; };
+		F899487C1B9ECBAA000DC950 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899487B1B9ECBAA000DC950 /* ViewController.swift */; };
+		F899487E1B9ECBAA000DC950 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F899487D1B9ECBAA000DC950 /* Images.xcassets */; };
+		F89948811B9ECBAA000DC950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F899487F1B9ECBAA000DC950 /* Main.storyboard */; };
+		F899488D1B9ECBAB000DC950 /* PLENCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899488C1B9ECBAB000DC950 /* PLENCheckTests.swift */; };
+		F89948981B9EE320000DC950 /* BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89948961B9EE320000DC950 /* BLE.swift */; };
+		F89948991B9EE320000DC950 /* SerialPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89948971B9EE320000DC950 /* SerialPort.swift */; };
+		F89948A51B9EE3A3000DC950 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89948A41B9EE3A3000DC950 /* CoreBluetooth.framework */; };
+		F89948A71B9EE3BA000DC950 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89948A31B9EE389000DC950 /* ORSSerial.framework */; };
+		F89948A81B9EE3BA000DC950 /* ORSSerial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F89948A31B9EE389000DC950 /* ORSSerial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F89948AD1B9EE609000DC950 /* ConnectProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89948AC1B9EE609000DC950 /* ConnectProcess.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F89948871B9ECBAB000DC950 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F899486C1B9ECBAA000DC950 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F89948731B9ECBAA000DC950;
+			remoteInfo = PLENCheck;
+		};
+		F89948A21B9EE389000DC950 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F899489E1B9EE389000DC950 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+		F89948A91B9EE3BA000DC950 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F899489E1B9EE389000DC950 /* ORSSerialPort.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DCA89111A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F89948AB1B9EE3BA000DC950 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F89948A81B9EE3BA000DC950 /* ORSSerial.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F89948741B9ECBAA000DC950 /* PLENCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLENCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F89948781B9ECBAA000DC950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F89948791B9ECBAA000DC950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F899487B1B9ECBAA000DC950 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F899487D1B9ECBAA000DC950 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F89948801B9ECBAA000DC950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F89948861B9ECBAB000DC950 /* PLENCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PLENCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F899488B1B9ECBAB000DC950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F899488C1B9ECBAB000DC950 /* PLENCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLENCheckTests.swift; sourceTree = "<group>"; };
+		F89948961B9EE320000DC950 /* BLE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE.swift; sourceTree = "<group>"; };
+		F89948971B9EE320000DC950 /* SerialPort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialPort.swift; sourceTree = "<group>"; };
+		F899489E1B9EE389000DC950 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "PLENCheck/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
+		F89948A41B9EE3A3000DC950 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		F89948AC1B9EE609000DC950 /* ConnectProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectProcess.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F89948711B9ECBAA000DC950 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89948A51B9EE3A3000DC950 /* CoreBluetooth.framework in Frameworks */,
+				F89948A71B9EE3BA000DC950 /* ORSSerial.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F89948831B9ECBAB000DC950 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F899486B1B9ECBAA000DC950 = {
+			isa = PBXGroup;
+			children = (
+				F89948A41B9EE3A3000DC950 /* CoreBluetooth.framework */,
+				F899489E1B9EE389000DC950 /* ORSSerialPort.xcodeproj */,
+				F89948761B9ECBAA000DC950 /* PLENCheck */,
+				F89948891B9ECBAB000DC950 /* PLENCheckTests */,
+				F89948751B9ECBAA000DC950 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F89948751B9ECBAA000DC950 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F89948741B9ECBAA000DC950 /* PLENCheck.app */,
+				F89948861B9ECBAB000DC950 /* PLENCheckTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F89948761B9ECBAA000DC950 /* PLENCheck */ = {
+			isa = PBXGroup;
+			children = (
+				F89948AC1B9EE609000DC950 /* ConnectProcess.swift */,
+				F89948791B9ECBAA000DC950 /* AppDelegate.swift */,
+				F899487B1B9ECBAA000DC950 /* ViewController.swift */,
+				F899487D1B9ECBAA000DC950 /* Images.xcassets */,
+				F899487F1B9ECBAA000DC950 /* Main.storyboard */,
+				F89948961B9EE320000DC950 /* BLE.swift */,
+				F89948971B9EE320000DC950 /* SerialPort.swift */,
+				F89948771B9ECBAA000DC950 /* Supporting Files */,
+			);
+			path = PLENCheck;
+			sourceTree = "<group>";
+		};
+		F89948771B9ECBAA000DC950 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F89948781B9ECBAA000DC950 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F89948891B9ECBAB000DC950 /* PLENCheckTests */ = {
+			isa = PBXGroup;
+			children = (
+				F899488C1B9ECBAB000DC950 /* PLENCheckTests.swift */,
+				F899488A1B9ECBAB000DC950 /* Supporting Files */,
+			);
+			path = PLENCheckTests;
+			sourceTree = "<group>";
+		};
+		F899488A1B9ECBAB000DC950 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F899488B1B9ECBAB000DC950 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F899489F1B9EE389000DC950 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F89948A31B9EE389000DC950 /* ORSSerial.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F89948731B9ECBAA000DC950 /* PLENCheck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F89948901B9ECBAB000DC950 /* Build configuration list for PBXNativeTarget "PLENCheck" */;
+			buildPhases = (
+				F89948701B9ECBAA000DC950 /* Sources */,
+				F89948711B9ECBAA000DC950 /* Frameworks */,
+				F89948721B9ECBAA000DC950 /* Resources */,
+				F89948AB1B9EE3BA000DC950 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F89948AA1B9EE3BA000DC950 /* PBXTargetDependency */,
+			);
+			name = PLENCheck;
+			productName = PLENCheck;
+			productReference = F89948741B9ECBAA000DC950 /* PLENCheck.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F89948851B9ECBAB000DC950 /* PLENCheckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F89948931B9ECBAB000DC950 /* Build configuration list for PBXNativeTarget "PLENCheckTests" */;
+			buildPhases = (
+				F89948821B9ECBAB000DC950 /* Sources */,
+				F89948831B9ECBAB000DC950 /* Frameworks */,
+				F89948841B9ECBAB000DC950 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F89948881B9ECBAB000DC950 /* PBXTargetDependency */,
+			);
+			name = PLENCheckTests;
+			productName = PLENCheckTests;
+			productReference = F89948861B9ECBAB000DC950 /* PLENCheckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F899486C1B9ECBAA000DC950 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "PLEN Project Company Ltd.";
+				TargetAttributes = {
+					F89948731B9ECBAA000DC950 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					F89948851B9ECBAB000DC950 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = F89948731B9ECBAA000DC950;
+					};
+				};
+			};
+			buildConfigurationList = F899486F1B9ECBAA000DC950 /* Build configuration list for PBXProject "PLENCheck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F899486B1B9ECBAA000DC950;
+			productRefGroup = F89948751B9ECBAA000DC950 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F899489F1B9EE389000DC950 /* Products */;
+					ProjectRef = F899489E1B9EE389000DC950 /* ORSSerialPort.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F89948731B9ECBAA000DC950 /* PLENCheck */,
+				F89948851B9ECBAB000DC950 /* PLENCheckTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F89948A31B9EE389000DC950 /* ORSSerial.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ORSSerial.framework;
+			remoteRef = F89948A21B9EE389000DC950 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F89948721B9ECBAA000DC950 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F899487E1B9ECBAA000DC950 /* Images.xcassets in Resources */,
+				F89948811B9ECBAA000DC950 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F89948841B9ECBAB000DC950 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F89948701B9ECBAA000DC950 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89948991B9EE320000DC950 /* SerialPort.swift in Sources */,
+				F899487C1B9ECBAA000DC950 /* ViewController.swift in Sources */,
+				F89948981B9EE320000DC950 /* BLE.swift in Sources */,
+				F89948AD1B9EE609000DC950 /* ConnectProcess.swift in Sources */,
+				F899487A1B9ECBAA000DC950 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F89948821B9ECBAB000DC950 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F899488D1B9ECBAB000DC950 /* PLENCheckTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F89948881B9ECBAB000DC950 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F89948731B9ECBAA000DC950 /* PLENCheck */;
+			targetProxy = F89948871B9ECBAB000DC950 /* PBXContainerItemProxy */;
+		};
+		F89948AA1B9EE3BA000DC950 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ORSSerial;
+			targetProxy = F89948A91B9EE3BA000DC950 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F899487F1B9ECBAA000DC950 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F89948801B9ECBAA000DC950 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F899488E1B9ECBAB000DC950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F899488F1B9ECBAB000DC950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F89948911B9ECBAB000DC950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PLENCheck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F89948921B9ECBAB000DC950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PLENCheck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F89948941B9ECBAB000DC950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PLENCheckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PLENCheck.app/Contents/MacOS/PLENCheck";
+			};
+			name = Debug;
+		};
+		F89948951B9ECBAB000DC950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PLENCheckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PLENCheck.app/Contents/MacOS/PLENCheck";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F899486F1B9ECBAA000DC950 /* Build configuration list for PBXProject "PLENCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F899488E1B9ECBAB000DC950 /* Debug */,
+				F899488F1B9ECBAB000DC950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F89948901B9ECBAB000DC950 /* Build configuration list for PBXNativeTarget "PLENCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F89948911B9ECBAB000DC950 /* Debug */,
+				F89948921B9ECBAB000DC950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F89948931B9ECBAB000DC950 /* Build configuration list for PBXNativeTarget "PLENCheckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F89948941B9ECBAB000DC950 /* Debug */,
+				F89948951B9ECBAB000DC950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F899486C1B9ECBAA000DC950 /* Project object */;
+}
