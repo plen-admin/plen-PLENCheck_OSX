@@ -66,6 +66,7 @@ class ViewController: NSViewController, PlenCommDelegate {
         cmbBoxSerial_Init()
         // Do any additional setup after loading the view.
     }
+    
 
     override var representedObject: AnyObject? {
         
@@ -77,7 +78,7 @@ class ViewController: NSViewController, PlenCommDelegate {
     /*----- シリアルポート一覧コンボボックス初期化 -----*/
     func cmbBoxSerial_Init() {
         // 「$ ls /dev/tty.usb*」の結果をpipeに格納，受け取ったtty.usb一覧をコンボボックスに表示する
-        let task = NSTask()
+/*        let task = NSTask()
         task.launchPath = "/bin/sh"
         task.arguments = ["-c", "ls /dev/tty.usb*"]
         
@@ -97,22 +98,28 @@ class ViewController: NSViewController, PlenCommDelegate {
             if cmbBoxSerial.objectValues.count > 0 {
                 cmbBoxSerial.selectItemAtIndex(0)
             }
-        }
+        }
         task.waitUntilExit()
-    }
+*/    }
     @IBAction func btnConnect_Clicked(sender: AnyObject) {
         // BLE通信
-        if (cmbBoxConnect.objectValueOfSelectedItem as! String) == BLE {
+        if (cmbBoxConnect.objectValueOfSelectedItem as? String) == BLE {
             if bleProcess.centralManager.state != CBCentralManagerState.PoweredOn {
                 let alert = NSAlert()
-                alert.messageText = "error : BLEを利用できません．(\(bleProcess.centralManager.state.toString))    \n"
+                alert.messageText = "error : BLE isn't available. (\(bleProcess.centralManager.state.toString))    \n"
                 alert.runModal()
                 return
             }
             connectProcess = bleProcess
         }
-            // USB通信
         else {
+            let alert = NSAlert()
+            alert.messageText = "error : choose the communication method. (\(bleProcess.centralManager.state.toString))    \n"
+            alert.runModal()
+            return
+        }
+            // USB通信
+ /*       else {
             if cmbBoxSerial.objectValueOfSelectedItem == nil {
                 let alert = NSAlert()
                 alert.messageText = "error : シリアルポートを選択してください．\n"
@@ -131,6 +138,7 @@ class ViewController: NSViewController, PlenCommDelegate {
             }
             connectProcess = usbProcess!
         }
+*/
         btnConnect.enabled = false
         btnDisConnect.enabled = true
         btnPortUpDate.enabled = false
@@ -153,7 +161,7 @@ class ViewController: NSViewController, PlenCommDelegate {
         cmbBoxSerial_Init()
     }
     @IBAction func cmbBoxConnect_SelectedItemChanged(sender: AnyObject) {
-        if (cmbBoxConnect.objectValueOfSelectedItem as! String) == USB {
+        if (cmbBoxConnect.objectValueOfSelectedItem as? String) == USB {
             cmbBoxSerial.enabled = true
             btnPortUpDate.enabled = true
         }
@@ -231,15 +239,15 @@ class ViewController: NSViewController, PlenCommDelegate {
 extension ViewController {
     func BLEStateUpdated(state: CBCentralManagerState) {
         cmbBoxConnect.removeAllItems()
+        cmbBoxConnect.stringValue = ""
         // BLE使用可能時はコンボボックスにBLE，USBを，それ以外の場合はUSBのみ表示する
         if state == CBCentralManagerState.PoweredOn {
             cmbBoxConnect.addItemWithObjectValue(BLE)
-            cmbBoxConnect.addItemWithObjectValue(USB)
+            cmbBoxConnect.selectItemAtIndex(0)
         }
-        else {
-            cmbBoxConnect.addItemWithObjectValue(USB)
-        }
-        cmbBoxConnect.selectItemAtIndex(0)
+        //cmbBoxConnect.addItemWithObjectValue(USB)
+        
+
         cmbBoxConnect_SelectedItemChanged(self)
     }
     

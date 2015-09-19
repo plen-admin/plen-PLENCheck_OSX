@@ -23,6 +23,7 @@ Podfile.lock
 # others
 *.swp
 *.app
+*.ai
 *.app/*.*
 *.dmg
 !.gitkeep

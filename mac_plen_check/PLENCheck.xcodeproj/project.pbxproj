@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F869AA731BAD1F7900F184BF /* plen_body.png in Resources */ = {isa = PBXBuildFile; fileRef = F869AA721BAD1F7900F184BF /* plen_body.png */; };
 		F899487A1B9ECBAA000DC950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89948791B9ECBAA000DC950 /* AppDelegate.swift */; };
 		F899487C1B9ECBAA000DC950 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899487B1B9ECBAA000DC950 /* ViewController.swift */; };
 		F899487E1B9ECBAA000DC950 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F899487D1B9ECBAA000DC950 /* Images.xcassets */; };
@@ -59,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F869AA721BAD1F7900F184BF /* plen_body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plen_body.png; path = ../../../plen__PLENCheck_for_mac/mac_plen_check/PLENCheck/img/plen_body.png; sourceTree = "<group>"; };
 		F89948741B9ECBAA000DC950 /* PLENCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLENCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89948781B9ECBAA000DC950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F89948791B9ECBAA000DC950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				F89948791B9ECBAA000DC950 /* AppDelegate.swift */,
 				F899487B1B9ECBAA000DC950 /* ViewController.swift */,
 				F899487D1B9ECBAA000DC950 /* Images.xcassets */,
+				F869AA721BAD1F7900F184BF /* plen_body.png */,
 				F899487F1B9ECBAA000DC950 /* Main.storyboard */,
 				F89948961B9EE320000DC950 /* BLE.swift */,
 				F89948971B9EE320000DC950 /* SerialPort.swift */,
@@ -263,6 +266,7 @@
 			files = (
 				F899487E1B9ECBAA000DC950 /* Images.xcassets in Resources */,
 				F89948811B9ECBAA000DC950 /* Main.storyboard in Resources */,
+				F869AA731BAD1F7900F184BF /* plen_body.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

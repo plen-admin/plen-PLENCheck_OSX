@@ -177,17 +177,17 @@ extension CBCentralManagerState {
     var toString : String! {
         switch self  {
         case CBCentralManagerState.PoweredOn:
-            return "BluetoothがONで，かつ，今利用可能です．"
+            return "Bluetooth POWER ON"
         case CBCentralManagerState.PoweredOff:
-            return "BluetoothがOFFになっています"
+            return "Bluetooth POWER OFF"
         case CBCentralManagerState.Resetting:
-            return "システムサービスとの接続が一時的に失われました．"
+            return "Bluetooth RESETTING"
         case CBCentralManagerState.Unauthorized:
-            return "このアプリケーションは，BLEを利用する認可がありません．"
+            return "Bluetooth UNAUTHORIZED"
         case CBCentralManagerState.Unknown:
-            return "BLEが利用可能は判定できません．"
+            return "Bluetooth UNKNOWN"
         case CBCentralManagerState.Unsupported:
-            return "このMacはBLEをサポートしていません．"
+            return "Blueooth UNSUPPORTED"
         }
     }
 }
